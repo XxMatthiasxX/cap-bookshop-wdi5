@@ -5,7 +5,7 @@
     "repository": "https://github.com/sap-samples/cloud-cap-samples.git",
     "author": "daniel.hutzel@sap.com",
     "dependencies": {
-        "@sap/cds": ">=5.5.3",
+        "@sap/cds": ">=5.9",
         "@sap/cds-odata-v2-adapter-proxy": "^1.9.0",
         "wdio-timeline-reporter": "^5.1.4"
     },

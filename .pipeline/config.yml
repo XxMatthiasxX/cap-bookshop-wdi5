@@ -25,14 +25,13 @@ steps:
 
   mtaBuild:
     buildTarget: 'CF'
-
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
     cloudFoundry:
       org: 'cf-dts-inner-source'
       space: 'dev'
-      credentialsId: 'I518646-CF' #TODO: correct credentials?
+      credentialsId: 'I518646-CF'
 
 ### Stage-specific configuration
 #stages:
