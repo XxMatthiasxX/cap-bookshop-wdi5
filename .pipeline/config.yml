@@ -17,30 +17,35 @@ general:
 
 ### Step-specific configuration
 steps:
-  mavenExecute:
-    dockerImage: devxci/mbtci:1.0.14
+#  mavenExecute:
+#    dockerImage: devxci/mbtci:1.0.14
 
-  artifactPrepareVersion:
-    versioningType: cloud_noTag
+#  artifactPrepareVersion:
+#    versioningType: cloud_noTag
+
+  mtaBuild:
+    buildTarget: 'CF'
 
   cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
     cloudFoundry:
       org: 'cf-dts-inner-source'
       space: 'dev'
       credentialsId: 'trainer-cf' #TODO: correct credentials?
 
 ### Stage-specific configuration
-stages:
+#stages:
 
-  'Central Build':
-    buildExecute : true
+#  'Central Build':
+#    buildExecute : true
 
-  'Acceptance':
-    cloudFoundryDeploy: false
+#  'Acceptance':
+#    cloudFoundryDeploy: false
     #TODO: add npmRun Step
 
-  'Confirm':
-    manualConfirmation: false
+#  'Confirm':
+#    manualConfirmation: false
 
-  'Release':
-    cloudFoundryDeploy: true
+#  'Release':
+#    cloudFoundryDeploy: true
