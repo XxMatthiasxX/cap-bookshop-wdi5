@@ -26,16 +26,6 @@ modules:
     requires:
       - name: I518646_bookshop-db
 
-
-  - name: I518646_bookshop-db
-    type: hdb
-    path: gen/db
-    requires:
-    - name: I518646_bookshop-db-container
-    parameters:
-      disk-quota: 256M
-      memory: 256M
-
   - name: I518646_bookshop-db-deployer
     type: hdb
     path: gen/db
@@ -45,7 +35,7 @@ modules:
       - name: I518646_bookshop-db
 
 resources:
-  - name: I518646_bookshop-db-container
+  - name: I518646_bookshop-db
     type: com.sap.xs.hdi-container
     parameters:
       service: hana

@@ -4,3 +4,4 @@ target
 .vscode
 */gen
 *.mtar
+*/mta_archives
