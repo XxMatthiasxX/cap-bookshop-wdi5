@@ -32,7 +32,7 @@ steps:
     cloudFoundry:
       org: 'cf-dts-inner-source'
       space: 'dev'
-      credentialsId: 'trainer-cf' #TODO: correct credentials?
+      credentialsId: 'I518646-CF' #TODO: correct credentials?
 
 ### Stage-specific configuration
 #stages:
